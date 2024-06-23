@@ -1,0 +1,34 @@
+/**
+ * JSwitchTabs
+ * @version 1.0
+ * @author AKmatiAK
+ * @license BSD0
+ */
+
+[data-contents]:not(.active-contents){
+	display: none;
+	opacity: 0;
+}
+
+.active-contents, .active-contents.unbox > *{
+	opacity: 1;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+}
+
+@keyframes fadeIn{
+	0% { opacity: 0; }
+	1% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@starting-style {
+  .active-contents {
+    opacity: 0;
+  }
+}
+
+/* you can add this class to wrapper div, this adds display:contents so it's like wrapper doesn't exist when rendering page */
+.unbox{
+	display: contents;
+}
